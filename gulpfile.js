@@ -6,14 +6,27 @@ var gulp = require ('gulp'),
 	browserSync = require('browser-sync'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	bourbon = require('node-bourbon');
+	bourbon.includePaths
 var paths = {
 	scss: './src/scss/*.scss'
 };
 
 /* Set up of Gulp Tasks */
 
-gulp.task('styles', function(){
+gulp.task('sass', function(){
+	gulp.src('src/scss/app.scss')
+		.pipe(sass({
+
+			includePaths: require('node-bourbon').includePaths
+		}))
+		.pipe(gulp.dest('src/css/app.css'));
+});
+
+
+
+/*gulp.task('styles', function(){
 	return gulp.src(paths.scss)
 		.pipe(sass({style: 'expanded'}))
 		.pipe(autoprefixer('last 2version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
@@ -21,10 +34,10 @@ gulp.task('styles', function(){
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minifycss())
 		.pipe(gulp.dest('css'));	
-});
+}); */
 
 
-gulp.task('browser-sync', function(){
+ gulp.task('browser-sync', function(){
 	var files = [
 		'src/scss/**/*.scss',
 		'src/css/**/*.css',
@@ -37,4 +50,4 @@ browserSync.init(files, {
 	}
 });
 
-});
+}); 
