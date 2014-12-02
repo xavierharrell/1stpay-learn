@@ -2,28 +2,37 @@
 
 
 var gulp = require ('gulp'),
+	watch = require('gulp-watch'),
 	sass = require ('gulp-sass'),
 	browserSync = require('browser-sync'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
 	rename = require('gulp-rename'),
-	bourbon = require('node-bourbon');
+	bourbon = require('node-bourbon'),
+	neat = require('node-neat');
 	bourbon.includePaths
-var paths = {
-	scss: './src/scss/*.scss'
-};
+	neat.includePaths
 
 /* Set up of Gulp Tasks */
 
 gulp.task('sass', function(){
 	gulp.src('src/scss/app.scss')
 		.pipe(sass({
-
 			includePaths: require('node-bourbon').includePaths
+		})
+		.pipe(sass({
+			includePaths: require('node-neat').includePaths
 		}))
+		)
 		.pipe(gulp.dest('src/css/app.css'));
 });
 
+gulp.task('watchy', function(){
+	gulp.src('src/css/**/*.css')
+		.pipe(watch('src/css/**/*.css'))
+		.pipe(gulp.dest('./dist/'));
+
+})
 
 
 /*gulp.task('styles', function(){

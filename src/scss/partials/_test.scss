@@ -1,0 +1,11 @@
+.btn-test{
+	@include button;
+}
+
+.odd{
+	@include span-columns(6);
+}
+
+.even{
+	@include span-columns(8);
+}
