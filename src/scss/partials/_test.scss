@@ -1,11 +1,23 @@
-.btn-test{
-	@include button;
-}
-
 .odd{
-	@include span-columns(6);
+	@include span-columns(3);
 }
 
-.even{
-	@include span-columns(8);
+.one{
+	@include span-columns(1);
+}
+
+.two{
+	@include span-columns(2);
+}
+
+.third{
+	@include span-columns(3);
+}
+
+.fourth{
+	@include span-columns(4);
+}
+
+.fifth{
+	@include span-columns(5);
 }

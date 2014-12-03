@@ -7,13 +7,17 @@ var gulp = require ('gulp'),
 	browserSync = require('browser-sync'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
+	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
+	uglify = require('gulp-uglify'),
 	bourbon = require('node-bourbon'),
 	neat = require('node-neat');
 	bourbon.includePaths
 	neat.includePaths
 
 /* Set up of Gulp Tasks */
+
+/* Sass Compile and Minify */
 
 gulp.task('sass', function(){
 	gulp.src('src/scss/app.scss')
@@ -24,39 +28,21 @@ gulp.task('sass', function(){
 			includePaths: require('node-neat').includePaths
 		}))
 		)
-		.pipe(gulp.dest('src/css/app.css'));
+		.pipe(gulp.dest('dist/css/app.css'));
 });
 
-gulp.task('watchy', function(){
-	gulp.src('src/css/**/*.css')
-		.pipe(watch('src/css/**/*.css'))
-		.pipe(gulp.dest('./dist/'));
-
+/* JS concat and minify */
+gulp.task('scripts', function(){
+	gulp.src('src/js/*js')
+		.pipe(concat('main.js'))
+			.pipe(rename({suffix: '.min'}))
+			.pipe(uglify())
+			.pipe(gulp.dest('dist/js'));
 })
 
+gulp.task('watch', function(){
+	gulp.watch('src/scss/**/*.scss', ['sass']);
+	gulp.watch('src/js/*js');
+})
 
-/*gulp.task('styles', function(){
-	return gulp.src(paths.scss)
-		.pipe(sass({style: 'expanded'}))
-		.pipe(autoprefixer('last 2version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-		.pipe(gulp.dest('css'))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(minifycss())
-		.pipe(gulp.dest('css'));	
-}); */
-
-
- gulp.task('browser-sync', function(){
-	var files = [
-		'src/scss/**/*.scss',
-		'src/css/**/*.css',
-		'src/js/**/*.js'
-	];
-
-browserSync.init(files, {
-	server: {
-		baseDir: './'
-	}
-});
-
-}); 
+gulp.task('default', ['sass', 'scripts', 'watch']);
