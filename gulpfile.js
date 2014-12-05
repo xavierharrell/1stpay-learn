@@ -14,22 +14,9 @@ var gulp = require ('gulp'),
 	neat = require('node-neat');
 	bourbon.includePaths
 	neat.includePaths
+var reload = browserSync.reload;
 
 /* Set up of Gulp Tasks */
-
-/* Sass Compile and Minify */
-
-gulp.task('sass', function(){
-	gulp.src('src/scss/app.scss')
-		.pipe(sass({
-			includePaths: require('node-bourbon').includePaths
-		})
-		.pipe(sass({
-			includePaths: require('node-neat').includePaths
-		}))
-		)
-		.pipe(gulp.dest('dist/css/app.css'));
-});
 
 /* JS concat and minify */
 gulp.task('scripts', function(){
@@ -38,11 +25,31 @@ gulp.task('scripts', function(){
 			.pipe(rename({suffix: '.min'}))
 			.pipe(uglify())
 			.pipe(gulp.dest('dist/js'));
-})
+});
+
+
+
+/* Sass Compile and Minify */
+
+gulp.task('sass', function(){
+	return gulp.src('src/scss/**/*.scss')
+		.pipe(sass({
+			includePaths: require('node-bourbon').includePaths
+		})
+		.pipe(sass({
+			includePaths: require('node-neat').includePaths
+		}))
+		)
+		.pipe(gulp.dest('dist/css'))
+		.pipe(reload({stream:true}));
+});
+
+
 
 gulp.task('watch', function(){
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/*js');
+	gulp.watch('src/*html');
 })
 
 gulp.task('default', ['sass', 'scripts', 'watch']);
