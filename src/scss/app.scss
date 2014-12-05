@@ -1,4 +1,9 @@
-@import "bourbon",
+@import "partials/reset",
+		"bourbon",
 		"neat",
+		"partials/variables",
+		"extends/button",
 		"partials/type",
-		"partials/test";
+		"partials/lists",
+		"partials/buttons",
+		"partials/forms";
