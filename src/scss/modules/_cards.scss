@@ -1,0 +1,23 @@
+.cards{
+	@include clearfix;
+}
+
+.card{
+	border: 1px solid $base-blue;
+	margin: 0;
+	padding: $base-spacing;
+	display: inline-block;
+
+
+	ul li{
+		display: inline-block;
+
+		a{
+		color: $base-blue;
+	}
+	p{
+		color: $base-blue;
+	}
+	}
+}
+
