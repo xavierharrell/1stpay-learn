@@ -1,5 +1,5 @@
-var dest = '/dist';
-var src = '.src';
+var dest = './dist';
+var src = './src';
 
 module.exports ={
 	browserSync: {
@@ -24,11 +24,22 @@ module.exports ={
 		dest: dest + '/images'
 	},
 	markup: {
-		src: src + '/htdocs',
+		src: src + '/htdocs/**',
 		dest: dest
 	},
-	browserify:{
-		debug: true,
-		dest: dest
-	}
+	  browserify: {
+    // Enable source maps
+    debug: true,
+    // Additional file extentions to make optional
+    extensions: ['.coffee', '.hbs'],
+    // A separate bundle will be generated for each
+    // bundle config in the list below
+    bundleConfigs: [{
+        dest: dest,
+      outputName: 'app.js'
+    }, {
+        dest: dest,
+      outputName: 'head.js'
+    }]
+  }
 };

@@ -9,7 +9,7 @@ gulp.task('sass', function(){
 	return gulp.src(config.src)
 	.pipe(sourcemaps.init())
 	.pipe(sass(config.settings))
-	.pipe(sourcemaps.write());
+	.pipe(sourcemaps.write())
 	.pipe(autoprefixer({browsers: ['Last 2 version']}))
 	.pipe(gulp.dest(config.dest))
 	.pipe(browserSync.reload({stream:true}));

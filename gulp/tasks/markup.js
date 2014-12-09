@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var config = ('../congig').markup
+var config = require('../config').markup
 
 gulp.task('markup', function(){
 	return gulp.src(config.src)

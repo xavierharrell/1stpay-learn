@@ -1,7 +1,7 @@
 var changed = require('gulp-changed');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
-var config = require('../config').image;
+var config = require('../config').images;
 
 gulp.task('images', function(){
 	return gulp.src(config.src)
