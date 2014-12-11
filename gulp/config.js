@@ -12,11 +12,11 @@ module.exports ={
 		]
 	},
 	sass: {
-		src: src + '/scss/*.{sass, scss}',
-		dest: dest,
+		src: src + '/scss/**/*.scss',
+		dest: dest + '/css',
 		settings: {
 			sourceComments: 'map',
-			imagePath: '/images'
+			imagePath: '/images',
 		}
 	},
 	images: {
@@ -26,20 +26,5 @@ module.exports ={
 	markup: {
 		src: src + '/htdocs/**',
 		dest: dest
-	},
-	  browserify: {
-    // Enable source maps
-    debug: true,
-    // Additional file extentions to make optional
-    extensions: ['.coffee', '.hbs'],
-    // A separate bundle will be generated for each
-    // bundle config in the list below
-    bundleConfigs: [{
-        dest: dest,
-      outputName: 'app.js'
-    }, {
-        dest: dest,
-      outputName: 'head.js'
-    }]
-  }
+	}
 };

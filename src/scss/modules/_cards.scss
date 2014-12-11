@@ -1,23 +1,36 @@
-.cards{
-	@include clearfix;
+.main-topics {
+    @include clearfix;
+    ul {
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+        li {
+            display: inline-block;
+            width: 100%;
+            margin: 0 2% 3% 0;
+            padding: 0;
+            text-align: center;
+            border: 1px solid black;
+            @media (min-width: 900px){
+				width: 30%;
+            }
+            a{
+            	font-size: 20px;
+            	display: block;
+            	font-weight: 500;
+            	color: black;
+            }
+            p{
+            	font-size: $base-font-size / 1.25;
+            }
+            .icon {
+                display: block;
+                width: 50px;
+                height: 50px;
+                padding: 2% 0;
+                margin: 0 auto;
+            }
+        }
+    }
 }
-
-.card{
-	border: 1px solid $base-blue;
-	margin: 0;
-	padding: $base-spacing;
-	display: inline-block;
-
-
-	ul li{
-		display: inline-block;
-
-		a{
-		color: $base-blue;
-	}
-	p{
-		color: $base-blue;
-	}
-	}
-}
-
