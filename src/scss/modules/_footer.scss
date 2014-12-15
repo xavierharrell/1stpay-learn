@@ -1,5 +1,12 @@
-.footer{
-
+footer{
+	@include clearfix;
+	background-color: $base-blue;
+	height: 10em;
+	padding: 2em 1em;
 }
 
-.footer
+footer ul li a{
+	float: left;
+	color: white;
+	padding: 0 0.7em 0;
+}
