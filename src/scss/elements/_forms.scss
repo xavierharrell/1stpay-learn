@@ -52,6 +52,7 @@ textarea{
 
 input[type="search"]{
 	@include appearance(none);
+	width: 100%;
 }
 
 input[type="checkbox"], input[type="radio"]{

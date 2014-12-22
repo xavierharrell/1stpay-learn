@@ -5,7 +5,7 @@ section{
 
 //Constrain blocks //
 .constrain{
-	width: 90%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
@@ -15,6 +15,10 @@ section{
 	padding: 12.5em 0 10em;;
 }
 
+.search-widget{
+	width: 80%;
+	margin: 0 auto;
+}
 .main-search{
 	text-align: center;
 	@include span-columns(6);
