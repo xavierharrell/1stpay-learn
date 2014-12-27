@@ -1,18 +1,39 @@
-@import "base/normalize",
-		"bourbon",
-		"neat",
-		"base/defaults",
-		"base/colors",
-		"base/fonts",
-		"base/type",
-		"base/media-queries",
-		"base/layouts",
-		"extends/button",
-		"elements/lists",
-		"elements/buttons",
-		"elements/forms",
-		"modules/cards",
-		"modules/header",
-		"modules/nav",
-		"modules/breadcrumb",
-		"modules/footer";
+// Reset
+@import 	"base/normalize";
+//Add Bourbon and Neat
+@import		"bourbon";
+@import		"neat";
+//Globals
+@import		"base/defaults";
+//Mixins
+@import 	"base/mixins";
+//Colors
+@import		"base/colors";
+//Typeface
+@import		"base/fonts";
+//Typeface attributes
+@import		"base/type";
+//Media Queries
+@import		"base/media-queries";
+//Grid
+@import "base/grid";
+//Basic Layouts
+@import		"base/layouts";
+
+//Home Page Specific Layout
+@import     "layouts/home";
+
+//Single Entry Specific Layout
+@import     "layouts/entry_page";
+//Button Mixin To Extend
+@import		"extends/button";
+//Base Styling for Lists, Forms
+@import		"elements/lists";
+@import		"elements/buttons";
+@import		"elements/forms";
+//UI Components
+@import		"modules/cards";
+@import		"modules/header";
+@import		"modules/nav";
+@import		"modules/breadcrumb";
+@import		"modules/footer";

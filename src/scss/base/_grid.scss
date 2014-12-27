@@ -1,0 +1,26 @@
+// Define each column in a list (Array)
+$columns: (1,2,3,4,5,6,7,8,9,10,11,12);
+
+//Include outer-container mixin from Neat
+.container{
+	@include new-outer-container(90%);
+}
+
+//Include row mixin from Neat; Also included Omega mixin from Neat
+.row{
+	@include row;
+	.grid:last-child{
+		@include omega;
+	}
+}
+
+//Grid function that loops and gives creates names
+.grid{
+	//Begin the loop that takes the values from the $columns list and names them col-X where X is the value from the $columns list
+	@each $col in $columns{
+		&.col-#{$col}{
+			//Include the mixin from Neat and pass in the value from the loop
+			@include span-columns($col);
+		}
+	}
+}

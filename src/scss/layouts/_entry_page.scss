@@ -1,0 +1,9 @@
+//Single Entry//
+.entry-container{
+	@include outer-container;
+}
+
+.entry-title{
+	font-size: $base-font-size * 3;
+	color: $base-blue;
+}
