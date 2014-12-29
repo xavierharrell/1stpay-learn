@@ -15,6 +15,7 @@ module.exports ={
 		src: src + '/scss/**/*.scss',
 		dest: dest + '/css',
 		settings: {
+			includePaths: require('node-neat').includePaths,
 			sourceComments: 'map',
 			imagePath: '/images',
 		}
@@ -26,5 +27,5 @@ module.exports ={
 	markup: {
 		src: src + '/htdocs/**',
 		dest: dest
-	}
+	},
 };
