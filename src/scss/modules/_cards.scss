@@ -2,6 +2,7 @@
     max-width: 100%;
     position: relative;
     margin: 0 auto;
+    padding: 0;
     .card {
         display: inline-block;
         width: 250px;
@@ -17,8 +18,15 @@
             padding: 0.5em;
             text-align: center;
         }
-        p{
-            font-size: $base-font-size / 1.5;
+        .header{
+            font-size: $h1-font-size / 1.75;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: $base-line-height / 1.5;
+            text-transform: uppercase;
+        }
+        .description{
+            font-size: $base-font-size / 1.25;
         }
         .icon{
             display: block;
