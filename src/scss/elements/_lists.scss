@@ -17,8 +17,13 @@ ol,li{
 
 }
 
+.steps{
+	counter-reset: item ;
 
-//Single Entry //
-.entry-container ol li{
-	font-size: 1.25em;
+	&>*:before{
+		counter-increment: item;
+		content: counter(item) " ";
+		font-size: $base-font-size * 3;
+
+	}
 }
