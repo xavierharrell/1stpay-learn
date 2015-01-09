@@ -20,6 +20,11 @@ module.exports ={
 			imagePath: '/images',
 		}
 	},
+	browserify: {
+		entries: src + 'src/js/*',
+		dest: dest + '/js',
+		outputName: 'main.js'
+	},
 	images: {
 		src: src + '/images/**',
 		dest: dest + '/images'
