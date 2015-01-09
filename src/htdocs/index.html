@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<script src="//use.typekit.net/lov0xni.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -20,7 +22,9 @@
     <!-- Beginning -->
     <div>
         <header>
-           <nav class="main-nav">
+        <div class="nav-wrapper">
+        <a href="javascript:void(0)" class="nav-menu-button" id="js-mobile-menu">MENU</a>
+           <nav class="nav">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/entry-listings.html">Entry Listings</a></li>
@@ -32,6 +36,7 @@
                     <li><a href="/404.html">404</a></li>
                 </ul>
             </nav>
+            </div>
         </header>
         <section class="main-search-container">
             <div class="main-search search-widget">
@@ -39,8 +44,7 @@
                 <p>Popular Search Terms: <a href="#">Term 1,</a><a href="#">Term 2</a></p>
             </div>
         </section>
-        <section class="main-topics">
-            <div class="constrain">
+        <section class="main-topics constrain">
                 <ul class="cards">
                     <li class="card">
                         <a href="">
@@ -64,7 +68,6 @@
                         </a>
                     </li>
                 </ul>
-            </div>
         </section>
     </div>
     <footer>

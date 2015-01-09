@@ -1,4 +1,4 @@
-//Main page //
+//Main Search Container //
 .main-search-container{
 	background-image: url(http://placehold.it/2000x400);
 	position: relative;
@@ -18,7 +18,22 @@
 	}
 }
 
+//Main Topics//
 .main-topics{
+padding: 3em 1em;
+margin: 1em 0;
+
+	@include media($large-desktop){
 	position: relative;
 	padding: 4em 0;
+	margin: 0 auto;
+	}
+}
+
+ .main-topics .constrain{
+ 	@include outer-container;
+
+ 	.cards .card{
+ 		@include span-columns(4);
+ 	}
 }

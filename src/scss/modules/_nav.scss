@@ -1,25 +1,24 @@
-header{
-	display: block;
-	margin: 4em 0;
-}
+header.nav{
 
-header>nav{
+background-color: $base-blue;
+border-bottom: 1px solid black;
+min-height: 60px;
+width: 100%;
+z-index: 999;
+
+.nav-wrapper{
+	@include clearfix;
+	@include outer-container;
 	position: relative;
-	z-index: 10;
+	padding-right: 1em;
+}
 }
 
-nav ul{
-	padding: 0;
-}
-
-nav ul li{
-	margin: 0 auto;
-	float: left;
-	padding: 0 1em 0;
-}
-
-.main-nav{
-	position: absolute;
-	top: 2em;
-	right: 3em;
+.nav-menu-button{
+	color: $base-blue;
+	display: block;
+	float: right;
+	margin: 0;
+	padding-right: 1em;
+	text-transform: uppercase;
 }
