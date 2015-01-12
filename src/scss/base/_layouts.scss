@@ -5,7 +5,10 @@ section{
 
 //Constrain //
 .constrain{
-	max-width: 900px;
+	max-width: 90%;
 	margin: 0 auto;
 }
-
+//Generic container//
+.container{
+ @include outer-container;
+}

@@ -24,7 +24,8 @@
 @import     "layouts/home";
 
 //Single Entry Specific Layout
-@import     "layouts/entry_page";
+@import     "layouts/entry_single";
+@import     "layouts/category_listing";
 //Button Mixin To Extend
 @import		"extends/button";
 //Base Styling for Lists, Forms
