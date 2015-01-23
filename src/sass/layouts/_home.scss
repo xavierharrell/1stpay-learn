@@ -1,0 +1,29 @@
+//Main Search Container //
+.main-search-container {
+    background-image: url(http://placehold.it/2000x400);
+    position: relative;
+    padding: 12.5em 0 10em;
+}
+
+.search-widget {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-search {
+    text-align: center;
+    input[type="search"] {
+        width: 100%;
+        height: 3em;
+    }
+}
+
+//Main Topics//
+.main-topics {
+    padding: 3em 1em;
+    margin: 0 auto;
+    @include media($huge) {
+    	@include outer-container;
+        position: relative;
+    }
+}
