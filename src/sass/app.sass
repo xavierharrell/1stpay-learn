@@ -1,14 +1,23 @@
 @import 'utils/variables';
 @import 'utils/functions';
 @import 'utils/mixins';
+@import 'base/colors';
 @import 'utils/placeholders';
 
 @import 'base/reset';
-@import 'base/typography';
 
 @import 'vendor/bourbon/bourbon';
+// @import 'vendor/base/grid-settings';
 @import 'vendor/base/base';
 @import 'vendor/neat/neat';
+
+@import 'base/fonts';
+@import 'base/typography';
+
+
+@import 'base/media-queries';
+
+
 
 @import 'partials/navigation';
 @import 'partials/grid';
@@ -18,7 +27,11 @@
 @import 'partials/forms';
 
 @import 'components/buttons';
+@import 'components/cards';
 @import 'components/dropdown';
+@import 'components/breadcrumbs';
 
 @import 'pages/home';
 @import 'pages/contact';
+@import 'pages/entry_single';
+@import 'pages/category_listing';
