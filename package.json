@@ -18,7 +18,8 @@
   ],
   "browser": {
     "underscore": "backbone/node_modules/underscore",
-    "plugin": "./src/javascript/vendor/jquery-plugin.js"
+    "plugin": "./src/javascript/vendor/jquery-plugin.js",
+    "typeahead": "./src/javascript/components/typeahead.js/dist/typeahead.bundle.min.js"
   },
   "browserify": {
     "transform": [
@@ -31,6 +32,12 @@
     "plugin": {
       "exports": "plugin",
       "depends": [
+        "jquery:$"
+      ]
+    },
+    "typeahead": {
+      "exports": "typeahead",
+      "depends":[
         "jquery:$"
       ]
     }

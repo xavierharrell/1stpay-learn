@@ -2,20 +2,27 @@
 
 var $ = require('jquery');
 var _ = require('underscore');
+var TYP = require('typeahead');
 // global.js already contains jQuery, so in our config.js file, we
 // are exposing it to other files like this one in the `require` array.
 // Also in config.js, jquery is listed in `external` array for this bundle.
 // This combination lets this file use the jquery module bundled with
 // global.js, instead including it twice!
 
-var messageTemplate = _.template("<p>Made with <%= feels %> at <a href='<%= url %>'><%= bestCompanyEvar %>!</a></p>");
-
-var message = messageTemplate({
-  bestCompanyEvar: 'Viget',
-  feels: '♥',
-  url: 'http://viget.com'
+$(document).ready(function() {
+  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
+  $('#js-centered-navigation-menu').removeClass("show");
+  
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-centered-navigation-menu').slideToggle(function(){
+      if($('#js-centered-navigation-menu').is(':hidden')) {
+        $('#js-centered-navigation-menu').removeAttr('style');
+      }
+    });
+  });
 });
 
-$('body').append(message);
+var basic = "hello";
 
-console.log('page.js loaded!');
+console.log(basic);
