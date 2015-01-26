@@ -1,9 +1,8 @@
 .cards {
-@include outer-container(100%);
+  position: relative;
+  @include clearfix;
 }
 
-
-$grid-item-columns: 4;
 
 .card {
   ///////////////////////////////////////////////////////////
@@ -26,8 +25,6 @@ $grid-item-columns: 4;
   $card-image-hover-background: lighten($card-image-background, 5%);
   $card-margin: 1em;
 
-  @include flex-basis(10em);
-  @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
   border-radius: $base-border-radius;
@@ -40,10 +37,14 @@ $grid-item-columns: 4;
   padding: 1.5em 0.5em;
 
 @include media($xxmedium){
-  @include outer-container(40%);
-   @include grid-item-columns(5);
+  @include outer-container(100%);
+
 }
 
+@include media($huge){
+  @include span-columns(4);
+  @include omega(4n);
+}
   .card-image {
     overflow: hidden;
     max-height: 150px;
@@ -59,9 +60,7 @@ $grid-item-columns: 4;
 
   .card-header {
     @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
     border-bottom: $card-border;
-    border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
     font-size: $base-font-size * 1.15;
@@ -78,15 +77,15 @@ $grid-item-columns: 4;
       margin: 0 0 ($base-spacing / 2);
     }
   }
-  
+
   &:focus,
   &:hover {
-    background-color: $card-hover-background;
-    
+    background-color: $base-orange;
+
     .card-image img {
       background: $card-image-hover-background;
     }
-  
+
     .card-header {
       background-color: $card-hover-background;
     }

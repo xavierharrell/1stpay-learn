@@ -1,0 +1,40 @@
+.entry-listings-main{
+	height: 100%;
+	padding: 8em 0;
+}
+
+.cat-list{
+	@include outer-container;
+
+	@include media($xxmedium){
+		@include outer-container(100%);
+	}
+
+	@include media($huge){
+	@include outer-container(100%);
+	}
+
+
+
+	.cat-list-block{
+	@include span-columns(12);
+	padding: 1.5em 0;
+
+	@include media($xxmedium){
+		@include span-columns(6);
+		@include omega(2n);
+	}
+
+		@include media($huge){
+		@include span-columns(6);
+		@include omega(2n);
+		padding: 2em 0;
+		}
+	}
+
+	.cat-list-block-header{
+		font-size: $base-font-size;
+		margin-bottom: 0.4em;
+		text-transform: uppercase;
+	}
+}

@@ -9,7 +9,7 @@
     <title>1stPayPOS - Learn about your new 1stPayPOS</title>
     <meta name="description" content="asldkfasdkjflaksjfplasjdfpoasjfopmasodfjaskdj">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="app.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 </head>
 <body>
@@ -18,21 +18,29 @@
     <![endif]-->
 
     <!-- Beginning -->
-    <div>
-        <header>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/entry-listings.html">Entry Listings</a></li>
-                    <li><a href="/entry-single.html">Entry Single</a></li>
-                    <li><a href="/categories-listings.html">Categories Listing</a></li>
-                    <li><a href="/search-results.html">Search Results</a></li>
-                    <li><a href="/faq.html">F.A.Q.</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/404.html">404</a></li>
-                </ul>
-            </nav>
-        </header>
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <img src="" alt="Logo image">
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link"><a href="entry-single.html">Entry-Single</a></li>
+        <li class="nav-link"><a href="entry-listings.html">Entry-Listing</a></li>
+        <li class="nav-link"><a href="categories.html">Categories</a></li>
+        <li class="nav-link"><a href="categories-listings.html">Categories Listing</a></li>
+        <li class="nav-link"><a href="search-results.html">Search Results</a></li>
+        <li class="nav-link"><a href="faq.html">FAQ</a></li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="" alt="Logo image">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
         <section class="main-search-container">
             <div class="main-search search-widget">
                 <input type="search" placeholder="Search for topics on 1stPayPOS">
@@ -66,7 +74,7 @@
                 </ul>
             </div>
         </section>
-    </div>
+
     <footer>
         <ul>
             <li><a href="">link</a></li>

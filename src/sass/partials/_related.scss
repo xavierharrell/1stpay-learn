@@ -1,0 +1,9 @@
+.related-entries{
+
+background: lighten($base-blue, 35%);
+padding: 5em 0;
+
+.related-container{
+	@include outer-container(80%);
+}
+}

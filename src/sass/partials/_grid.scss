@@ -1,0 +1,12 @@
+// .constrain{
+// 	@include outer-container(90%);
+// }
+
+.main-container{
+@include outer-container(80%);
+
+	@include media($huge){
+	@include outer-container(50%);
+	}
+
+}

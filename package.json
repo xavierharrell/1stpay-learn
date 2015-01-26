@@ -34,18 +34,13 @@
       "depends": [
         "jquery:$"
       ]
-    },
-    "typeahead": {
-      "exports": "typeahead",
-      "depends":[
-        "jquery:$"
-      ]
     }
   },
   "devDependencies": {
     "browser-sync": "~1.3.6",
     "browserify": "^8.0.2",
     "browserify-shim": "^3.8.2",
+    "cl-strings": "0.0.5",
     "coffeeify": "~0.7.0",
     "gulp": "^3.8.7",
     "gulp-autoprefixer": "^2.0.0",
@@ -64,7 +59,7 @@
     "node-neat": "^1.4.2",
     "pretty-hrtime": "~0.2.1",
     "require-dir": "^0.1.0",
-    "vinyl-source-stream": "~0.1.1",
+    "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.2.1"
   },
   "dependencies": {

@@ -13,7 +13,7 @@
     <meta name="description" content="asldkfasdkjflaksjfplasjdfpoasjfopmasodfjaskdj">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
@@ -21,76 +21,111 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Beginning -->
-    <div class="container">
-        <header>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/entry-listings.html">Entry Listings</a></li>
-                    <li><a href="/entry-single.html">Entry Single</a></li>
-                    <li><a href="/categories-listings.html">Categories Listing</a></li>
-                    <li><a href="/search-results.html">Search Results</a></li>
-                    <li><a href="/faq.html">F.A.Q.</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/404.html">404</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="container constrain">
-    <div>
-        <ol class="category-list">
-        <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-         <li><a href="">
-        <h3 class="category-title">Entry Title Subtopic</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas alias ducimus, expedita maiores!</a></li>
-        </ol>
-    </div>            
-            </section>
-        <section class="constrain">
-            <hr>
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <img src="" alt="Logo image">
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link"><a href="entry-single.html">Entry-Single</a></li>
+        <li class="nav-link"><a href="entry-listings.html">Entry-Listing</a></li>
+        <li class="nav-link"><a href="categories.html">Categories</a></li>
+        <li class="nav-link"><a href="categories-listings.html">Categories Listing</a></li>
+        <li class="nav-link"><a href="search-results.html">Search Results</a></li>
+        <li class="nav-link"><a href="faq.html">FAQ</a></li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="" alt="Logo image">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="main-container entry-listings-main">
+<h1>Category Title</h1>
+<ol class="cat-list">
+    <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+    <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+     <li class="cat-list-block">
+    <h3 class="cat-list-block-header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, obcaecati.</li>
+</ol>
+</div>
+       <section class="related-entries">
+       <div class="related-container">
             <h3>Related</h3>
-            <ul class="cards">
-                <li class="card">
+            <ul class="cat-list">
+                <li class="cat-list-block">
                     <div class="header">Test</div>
                     <div class="description">Lorem ipsum dolor sit amet.</div>
                 </li>
-                <li class="card">
+                <li class="cat-list-block">
                     <div class="header">Test</div>
                     <div class="description">Lorem ipsum dolor sit amet.</div>
                 </li>
-                <li class="card">
+                <li class="cat-list-block">
                     <div class="header">Test</div>
                     <div class="description">Lorem ipsum dolor sit amet.</div>
                 </li>
             </ul>
+            </div>
         </section>
-    </div>
-    <footer>
-        <ul>
-            <li><a href="">link</a>
-            </li>
-            <li><a href="">link</a>
-            </li>
-            <li><a href="">link</a>
-            </li>
-            <li><a href="">link</a>
-            </li>
-        </ul>
-    </footer>
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="" alt="Logo image">
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><h3>Content</h3></li>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+    <ul>
+      <li><h3>Follow Us</h3></li>
+      <li><a href="javascript:void(0)">Facebook</a></li>
+      <li><a href="javascript:void(0)">Twitter</a></li>
+      <li><a href="javascript:void(0)">YouTube</a></li>
+    </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+</footer>
     <!-- End -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
