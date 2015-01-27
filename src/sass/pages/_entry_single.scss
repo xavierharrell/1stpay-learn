@@ -2,6 +2,10 @@
     @include outer-container(90%);
     padding: 4em 0;
 
+
+    @include media($xxlarge){
+        @include outer-container(70%);
+    }
     @include media($huge){
         @include outer-container(50%);
     }
@@ -12,7 +16,6 @@
 
     // Step by Step List //
 .steps {
-
     li {
         float: left;
         line-height: $base-line-height * 1.15;
@@ -40,9 +43,22 @@
         clear: both;
         padding: 2em 0;
 
+         @include media($small){
+            width: 20%;
+            height: 20%;
+         }
+
         @include media($medium){
-            width: 600px;
-            height: 450px;
+            width: 60%;
+            height: 60%;
+        }
+        @include media($large){
+            width: 70%;
+            height: 70%;
+        }
+        @include media($huge){
+            width: 80%;
+            height: 80%;
         }
     }
 }
@@ -55,53 +71,3 @@
 }
 
 
-
-// Related Entries //
-.related {
-    @include outer-container(90%);
-    li{
-        border: 1px solid $base-blue;
-        // padding: 0.5em;
-        margin: 0.75em 0;
-        font-size: $base-font-size / 1.10;
-        text-align: center;
-        line-height: $base-line-height / 0.85;
-        @include span-columns(6);
-        @include omega(2n);
-    }
-    .minor-title{
-        font-size: $base-font-size / 0.75;
-        text-transform: uppercase;
-        display: block;
-        background-color: $base-blue;
-        color: white;
-        padding: 0.5em 0;
-        overflow: hidden;
-    }
-
-}
-
-.popular{
-    @include outer-container(100%);
-    @include clearfix;
-    li{
-
-        }
-    a{
-        overflow: hidden;
-        background: $dark-gray;
-        border-bottom: $base-blue;
-        float: left;
-        cursor: pointer;
-        height: 1.5em;
-        width: 100%;
-        padding: 1.5em 2.5em;
-        @include transition(all 0.5s ease-in-out);
-
-    &:hover,&:focus{
-        background: $base-blue;
-    }
-
-
-    }
-}

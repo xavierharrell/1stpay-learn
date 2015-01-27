@@ -1,31 +1,62 @@
 //Main Search Container //
 .main-search-container {
-    background-image: url(http://placehold.it/2000x400);
+    background-image: url(images/main-banner.jpg);
     position: relative;
-    background-position: auto 100%;
+    background-size: cover;
+    background-position: 40% 50%;
     background-repeat: no-repeat;
     padding: 10em 0;
     text-align: center;
 
+
     @include media($xxmedium){
         @include outer-container(100%);
     }
-
+        @include media($huge){
+             background-position: 0 10%;
+        }
 }
 
-.main-search{
-    position: relative;
-    @include outer-container(80%);
+// .main-search{
+//     position: relative;
+//     @include outer-container(80%);
+// }
+
+.search-popular{
+    display: inline-block;
+    background-color: transparentize(white, 0.1);
+    width: 80%;
+    margin: 0 auto;
+    @include border-top-radius(4px);
+    @include border-bottom-radius(4px);
+       
+@include media($xxmedium){
+    width: 60%;
+    padding: 1em 0;
+    }
+
+
+@include media($huge){
+    padding: 1em 0 1em;
+    margin: 0 auto;
+    width: 40%;
+    font-size: $base-font-size * 1.25;
 }
 
+}
 
 
 .big-search {
     position: relative;
-    width: 20em !important;
+    width: 18em !important;
     height: 4em;
-        @include media($huge){
 
+    @include media($xxmedium){
+        width: 35em !important;
+    }
+
+
+        @include media($huge){
     width: 80em !important;
     height: 4em;
         }
@@ -33,7 +64,7 @@
 
 //Main Topics//
 .main-topics {
-    padding: 15em 1em;
+    padding: 10em 1em;
     margin: 0 auto;
     @include media($huge) {
     	@include outer-container(70%);
@@ -41,7 +72,7 @@
     }
 
     .card{
-
+       
         @include media($huge){
             @include span-columns(4);
             @include omega(4n);

@@ -1,0 +1,19 @@
+.intro-header{
+	text-align: center;
+	margin: 1em 0 5em 0;
+}
+
+.entry-title-white-small{
+	text-transform: uppercase;
+	color: white;
+	margin-bottom: $base-line-height;
+	padding: 0 0 5px 0;
+	font-size: $base-font-size / 0.75;
+}
+
+.entry-title-blue-small{
+	text-transform: uppercase;
+	color: $base-blue;
+	padding: 0;
+	font-size: $base-font-size / 0.75;
+	}
