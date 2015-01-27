@@ -46,10 +46,12 @@
 
         </header>
         <section class="main-search-container">
-            <div class="main-search search-widget" id="the-basics">
-                <input type="search" placeholder="Search for topics on 1stPayPOS" class="typeahead">
-                <p>Popular Search Terms: <a href="#">Term 1,</a><a href="#">Term 2</a></p>
+            <div class="main-search" id="the-basics">
+               <form action="/search-results" method="get" accept-charset="utf-8">
+                  <input type="search" placeholder="Search for topics on 1stPayPOS" class="big-search typeahead">
+               </form>
             </div>
+                      <p>Popular Search Terms: <a href="#">Term 1,</a><a href="#">Term 2</a></p>
         </section>
         <section class="main-topics-categories constrain">
                 <ul class="cards">
@@ -102,8 +104,22 @@
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
+                       <li class="card">
+                        <a href="">
+                            <span class="icon"><embed class="icon" src="images/hardware.svg" type=""></span>
+                            <p class="card-header">Lorem ipsum dolor.</p>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                        </a>
+                    </li>
                 </ul>
         </section>
+ <section class="contact-help padding-big">
+  <div class="constrain centered-content">
+    <h2>Still Needing Help?</h2>
+    <p>Submit a ticket and we will help you out</p>
+    <a href="/contact.html" class="button">Submit a Ticket</a>
+  </div>
+</section>
 <footer class="footer" role="contentinfo">
   <div class="footer-logo">
     <img src="" alt="Logo image">
