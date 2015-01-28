@@ -66,7 +66,7 @@ header {
 	left: 0;
 	height: $header-S;
 	width: 100%;
-	background: $base-blue;
+	background: darken($base-blue, 10%);
 	z-index: $header-zindex;
 
 	/* Force Hardware Acceleration in WebKit */
@@ -131,7 +131,7 @@ header {
 		font-weight: 600;
 
 		&.current {
-			background-color: lighten($base-blue, 20%);
+			background-color: lighten($base-blue, 60%);
 		}
 
 		.no-touch &:hover {
@@ -150,7 +150,7 @@ header {
 	top: 0;
 	height: 100%;
 	width: 50px;
-	background-color: lighten($base-blue, 10%);
+	background-color: darken($base-blue, 15%);
 
 	.cd-menu-text {
 		height: 100%;
@@ -238,7 +238,7 @@ header {
 	z-index: $secondary-nav; // see partials > _variables.scss
 
 	width: 260px;
-	background-color: lighten($base-blue, 20%);
+	background-color: darken($base-blue, 30%);
 
 	overflow-y: auto;
 
@@ -266,7 +266,7 @@ header {
 		display: block;
 		line-height: 2em;
 		padding: 0 16px 0 32px;
-		color: lighten($base-blue, 10%);
+		color: lighten($base-blue, 40%);
 
 		&.current {
 			background-color: lighten(lighten($base-blue, 20%), 10%);
