@@ -12,16 +12,6 @@ var typeahead = require('typeahead');
 
 $(function () {
 
-  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-  $('#js-centered-navigation-menu').removeClass("show");
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-centered-navigation-menu').slideToggle(function(){
-      if($('#js-centered-navigation-menu').is(':hidden')) {
-        $('#js-centered-navigation-menu').removeAttr('style');
-      }
-    });
-  });
 
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
@@ -57,8 +47,6 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
   'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
   'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
-
-console.log(states);
 
 $('#the-basics .typeahead').typeahead({
   hint: true,
