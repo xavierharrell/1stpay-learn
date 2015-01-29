@@ -94,14 +94,32 @@ header {
 #cd-logo {
 	display: block;
 	float: left;
-	margin: 12px 0 0 20px;
+	margin: 10px 0;
+
 
 	img {
 		display: block;
+		height: 30px;
+		text-align: center;
+		width: 100%;
+		
+			@include media($xxmedium){
+				height: 60px;
+				width: 100%;
+			}
+
+		@include media($huge){
+			height: 50px;
+			width: 100%;
+		}
 	}
 
-	@include media($xxmedium) {
-		margin: 22px 0 0 30px;
+	@include media($xxmedium){
+		margin: 2px 0 0 8px;
+	}
+
+	@include media($huge) {
+		margin: 10px 0 10px 7em;
 	}
 }
 
@@ -322,5 +340,58 @@ header {
 	&.submenu-open::after {
 		@include transform(translateY(-50%) rotate(90deg));
 
+	}
+}
+
+#cd-lateral-nav .socials {
+	@include clearfix;
+	padding: 0 32px;
+
+	a {
+		height: 32px;
+		width: 32px;
+		float: left;
+		padding: 0;
+		background-image: url('../img/cd-socials.svg');
+		background-repeat: no-repeat;
+		background-size: 128px 64px;
+		background-color: #FFF;
+		margin-right: .5em;
+		
+		&.cd-twitter {
+			background-position: 0 0;
+		}
+
+		&.cd-github {
+			background-position: -32px 0;
+		}
+
+		&.cd-facebook {
+			background-position: -64px 0;
+		}
+
+		&.cd-google {
+			background-position: -96px 0;
+		}
+
+		.no-touch &:hover {
+			background-color: darken($base-blue, 20%);
+
+			&.cd-twitter {
+				background-position: 0 -32px;
+			}
+
+			&.cd-github {
+				background-position: -32px -32px;
+			}
+
+			&.cd-facebook {
+				background-position: -64px -32px;
+			}
+
+			&.cd-google {
+				background-position: -96px -32px;
+			}
+		}
 	}
 }

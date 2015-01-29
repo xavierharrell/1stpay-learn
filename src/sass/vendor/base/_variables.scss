@@ -1,8 +1,9 @@
 // Typography
 $sans-serif: $fira;
+$header-sans-serif: $fira-h;
 $serif: $georgia;
 $base-font-family: $sans-serif;
-$header-font-family: $fira-h;
+$header-font-family: $header-sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;

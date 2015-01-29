@@ -1,7 +1,5 @@
 .instruction{
     @include outer-container(90%);
-    padding: 4em 0;
-
 
     @include media($xxlarge){
         @include outer-container(70%);
@@ -64,10 +62,6 @@
 }
 }
 
-.entry-title {
-    font-family: $base-font-family;
-    font-size: $base-font-size * 3;
-    color: $base-blue;
-}
+
 
 

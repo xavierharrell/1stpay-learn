@@ -17,8 +17,8 @@ h6 {
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
-color: $base-blue;
-font-weight: 800;
+  color: $base-blue;
+  // font-weight: 800;
 }
 
 h1 {
@@ -47,6 +47,9 @@ h6 {
 
 p {
   margin: 0 0 ($base-spacing / 2);
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-style: normal
 }
 
 a {

@@ -1,0 +1,21 @@
+.contact-form {
+    .form-item {
+        display: block;
+        @include media($xxmedium) {
+            @include span-columns(6);
+        }
+    }
+    .form-select {
+    	@include clearfix;
+    	position: relative;
+    	p{
+    		display: inline-block;
+    		margin-bottom: 1em / 2;
+    	}
+        // @include clearfix;
+        label, select {
+		
+
+        }
+    }
+}

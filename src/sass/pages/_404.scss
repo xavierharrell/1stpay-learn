@@ -1,0 +1,7 @@
+.404-list{
+
+	li.block{
+		@include span-columns(3);
+		@include omega(4n);
+	}
+}

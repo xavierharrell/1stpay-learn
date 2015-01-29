@@ -1,4 +1,14 @@
 .button{
 	@extend %button;
+	background: white;
+	border: 1px solid $base-orange;
+	color: $base-orange;
+	text-transform: uppercase;
+	@include transition(background 0.2s ease-in 0.1s,  color 0.2s ease-in 0.1s);
+
+	&:hover{
+		background: $base-orange;
+		color: white;
+	}
 	
 }

@@ -1,5 +1,6 @@
 $small: new-breakpoint(min-width 300px);
-$medium: new-breakpoint(max-width 600px);
+$xxsmall: new-breakpoint(min-width 320px);
+$medium: new-breakpoint(min-width 600px);
 $xxmedium: new-breakpoint(min-width 768px);
 $large: new-breakpoint(min-width 900px);
 $xxlarge: new-breakpoint(min-width 1024px);

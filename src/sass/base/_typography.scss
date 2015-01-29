@@ -1,19 +1,46 @@
 .intro-header{
-	text-align: center;
-	margin: 1em 0 5em 0;
+    text-align: center;
+    margin: 1em 0 5em 0;
 }
 
-.entry-title-white-small{
-	text-transform: uppercase;
-	color: white;
-	margin-bottom: $base-line-height;
-	padding: 0 0 5px 0;
-	font-size: $base-font-size / 0.75;
+.section-title{
+    font-size: 2em;
+    margin-bottom: 10px;
+
+    &--white{
+        color: white;
+    }
+    &--blue{
+        color: $base-blue;
+    }
 }
 
-.entry-title-blue-small{
-	text-transform: uppercase;
-	color: $base-blue;
-	padding: 0;
-	font-size: $base-font-size / 0.75;
-	}
+.entry-title{
+    font-size: $base-font-size * 3;
+    color: $base-blue;
+    text-transform: uppercase;
+
+&--small--white {  
+    color: white;
+    padding: 0 0 5px 0;
+    font-size: $base-font-size / 0.75;
+}
+
+&--small--blue {
+    color: $base-blue;
+    font-size: $base-font-size / 0.75;
+}
+
+}
+
+    .minor-title{
+        font-size: $base-font-size / 0.75;
+        text-transform: uppercase;
+        display: block;
+        background-color: $base-blue;
+        color: white;
+        padding: 0.5em 0;
+        overflow: hidden;
+    }
+
+

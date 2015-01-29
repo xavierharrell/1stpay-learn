@@ -1,9 +1,34 @@
+// Related Entries //
 .related-entries{
-
-background: lighten($base-blue, 35%);
 padding: 5em 0;
+background: lighten($base-blue, 30%);
 
-.related-container{
-	@include outer-container(80%);
+ a{
+      color: $base-blue;
+        border-bottom: $base-blue;
+        // float: left;
+        cursor: pointer;
+        margin: 1em 0em;
+        display: block;
+ 
+
+
+@include media($xxmedium){
+    @include span-columns(6);
 }
+
+@include media($xxlarge){
+    @include span-columns(4);
 }
+
+@include media($huge){
+    @include span-columns(3);
+}
+    &:hover,&:focus{
+        color: white;
+    }
+
+
+    } 
+
+    }

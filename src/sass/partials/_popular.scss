@@ -1,47 +1,27 @@
-.popular{
-    background: lighten($base-blue, 15%);
+.popular-entries {
+    background: lighten($base-blue, 5%);
     position: relative;
-    padding: 5em 0 7em;
+    padding: 5em 0;
 
-    li{
-
-        }
-    a{
-        // overflow: hidden;
+    a {
+        // float: left;
         color: white;
-        // background: $dark-gray;
-        border-bottom: $base-blue;
-        float: left;
-        // cursor: pointer;
-        height: 1.5em;
-        width: 100%;
-        margin: 2em 0em;
-        padding: 1.5em 0;
+        margin: 1em 0em;
         display: block;
-    
-    @include media($xxmedium){
-    @include span-columns(6);
-}
+        @include media($xxmedium) {
+            @include span-columns(6);
+        }
 
-@include media($xxlarge){
-    @include span-columns(4);
-}
+        @include media($xxlarge) {
+            @include span-columns(4);
+        }
 
-@include media($huge){
-    @include span-columns(3);
-}
-    &:hover,&:focus{
-        color: $base-blue;
+        @include media($huge) {
+            @include span-columns(3);
+        }
+
+        &:hover, &:focus {
+            color: $base-blue;
+        }
     }
-    
-
-
-    &:hover,&:focus{
-        color: $base-blue;
-    }
-
-
-    }
-}        
-
-
+}

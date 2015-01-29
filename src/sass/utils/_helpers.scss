@@ -1,0 +1,14 @@
+.hide-on-small{
+	display: none;
+	@include media($medium){
+		display: block;
+	};
+}
+
+.show-on-small{
+	display: block;
+	padding: 0 0 2em 0;
+	@include media($medium){
+		display: none;
+	}
+}
