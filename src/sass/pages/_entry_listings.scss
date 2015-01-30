@@ -6,16 +6,6 @@
 .cat-list{
 	@include outer-container;
 
-	@include media($xxmedium){
-		@include outer-container(100%);
-	}
-
-	@include media($huge){
-	@include outer-container(100%);
-	}
-
-
-
 	.cat-list-block{
 	// @include span-columns(12);
 	padding: 1.5em 0em;

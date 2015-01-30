@@ -1,83 +1,85 @@
-.new-cards{
-	// padding: 0 0 4em 0;
-	// margin: 0;
-	// @include clearfix;
-	// position: relative;
+.new-cards {
+position: relative;
+@include outer-container;
 
-li{
-@include transition (all 0.2s ease-in-out);
-	$card-background: $base-blue;
-  $base-border-color: $dark-gray !default;
-  $base-border-radius: 3px !default;
-  $card-border: 1px solid $base-blue;
-  $base-background-color: $dark-gray !default;
-  $card-background: lighten($base-blue, 80%);
-
-  background-color: $card-background;
-  border-radius: $base-border-radius;
-  border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  $card-image-hover-background: lighten($base-blue, 5%);
-  	cursor: pointer;
-	width: 100%;
-	float: left;
-	height: 230px;
-	text-align: center;
-	border: 1px solid $base-blue;
-	margin: 1em 0;
-	position: relative;
-.icon{
-	display: inline-block;
-	height: 80px;
-	weight: 80px;
-	padding-top: 10px;
-}
-.new-card-header{
-	font-size: 1em;
-	position: relative;
-	padding: 5px 0;
-	text-transform: uppercase;
-}
-.new-card-copy{
-	display: inline-block;
-}
-
-a{
-	display: block;
-
-	&:focus,
-  &:hover {
-    background-color: $base-blue;
-
-    .card-image img {
-      background: $base-blue;
+    li {
+        $base-spacing: 5.5em !default;
+        $card-background: $base-blue;
+        $base-border-color: $dark-gray !default;
+        $base-border-radius: 3px !default;
+        $card-border: 1px solid $base-blue;
+        $base-background-color: $dark-gray !default;
+        $card-background: lighten($base-blue, 80%);
+        @include transition(all 0.2s ease-in-out);
+        background-color: $card-background;
+        border-radius: $base-border-radius;
+        border: $card-border;
+        box-shadow: 0 2px 4px darken($base-background-color, 10%);
+        $card-image-hover-background: lighten($base-blue, 5%);
+        cursor: pointer;
+        // width: 100%;
+        float: left;
+        height: 230px;
+        text-align: center;
+        border: $card-border;
+        margin: 1em 0;
+        padding: 0.5em 0;
+        position: relative;
+        .icon {
+            display: inline-block;
+            height: 80px;
+            weight: 80px;
+            // padding-top: 10px;
+       
+        }
+        .new-card-header {
+            font-size: $base-font-size * 1.15;
+            font-weight: bold;
+            color: $base-blue;
+            padding: ($base-spacing / 3) ($base-spacing / 2);
+            text-transform: uppercase;
+        }
+        .new-card-copy {
+            font-size: 1em;
+            line-height: 1.5em;
+            padding: ($base-spacing / 10) ($base-spacing / 2);
+        }
+        &:focus,
+        &:hover {
+            background-color: $base-blue;
+            .card-image img {
+                background: $base-blue;
+            }
+            .new-card-header{
+            	color: white;
+            }
+        }
+        &:active {
+            background-color: $base-blue;
+            .card-header {
+                background-color: $base-blue;
+            }
+        }
     }
-
-  }
-
-  &:active {
-    background-color: $base-blue;
-
-    .card-header {
-      background-color: $base-blue;
-    }
-  }
 }
 
+
+
+.new-cards li {
+@include media($small-viewport){
+	@include span-columns(6);
+	@include omega(2n);
 }
 
+@include media($medium-viewport){
+	@include span-columns(4);
+	@include omega(3n);
 }
 
-.new-cards li{
-	@include media($xxmedium){
-		width: 48%;
-		margin-right: 1.5%;
-	}
-	@include media($xxhuge){
-		@include fill-parent;
-		width: 30%;
-	}
-	@include media($xxxhuge){
-		width: 23%;
-	}
+@include media($large-viewport){
+	@include span-columns(3);
+	@include omega(4n);
+}
+
+
 }

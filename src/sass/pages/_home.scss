@@ -1,6 +1,3 @@
-
-
-
 .search-popular {
     display: block;
     background-color: transparentize($base-blue, 0.2);
@@ -16,17 +13,16 @@
 
 //Main Topics//
 .main-topics {
-    padding: 10em 1em;
-    margin: 0 auto;
-    @include media($huge) {
-        @include outer-container(70%);
-        text-align: center;
-    }
-
-    .card {
-        @include media($huge) {
-            @include span-columns(4);
-            @include omega(4n);
+    padding: 4em 0;
+    @include outer-container(95%);
+    .new-cards li.card-block {
+       @include media($large-viewport){
+        @include span-columns(4);
+       }
+       @include media($small-viewport){
+        &:last-child{
+            @include shift(3);
         }
+       }
     }
 }

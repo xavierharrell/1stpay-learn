@@ -1,21 +1,39 @@
 .contact-form {
     .form-item {
         display: block;
-        @include media($xxmedium) {
+        width: 100%;
+        margin: 1em 0 0;
+    &.field{
+            @include media($xxmedium) {
             @include span-columns(6);
         }
+}
+        label{
+            color: $base-blue;
+            text-transform: uppercase;
+            font-size: $base-font-size * 1.15;
+        }
+        input{
+            margin-bottom: 2em;
+        }
+    }
+    .form-field-title{
+        font-size: $base-font-size * 1.75;
+        color: $base-orange;
+        font-weight: 400;
     }
     .form-select {
-    	@include clearfix;
-    	position: relative;
-    	p{
-    		display: inline-block;
-    		margin-bottom: 1em / 2;
-    	}
-        // @include clearfix;
-        label, select {
-		
-
-        }
+        @include clearfix;
+        position: relative;
+    }
+    .form-select label {
+        margin: 0.5em 0 1.25em;
+        vertical-align: top;
+        color: darken($medium-gray, 20%);
+        @include span-columns(6);
+        @include omega(2n);
+    }
+    .form-select input {
+        display: inline-block;
     }
 }

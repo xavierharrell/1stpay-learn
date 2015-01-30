@@ -1,0 +1,13 @@
+.hero-container{
+	@include background(linear-gradient(rgba($base-blue, 0.45), rgba($base-blue, 0.245) ), url("images/main-banner.jpg"));
+	background-size: cover;
+
+	& h1, h2{
+		color: white;
+		text-shadow: 2px 4px 1em darken($base-blue, 15%); 
+	}
+}
+
+.contact-form{
+	@include outer-container(90%);
+}

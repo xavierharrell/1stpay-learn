@@ -1,4 +1,7 @@
-
+.main-container-topic{
+    @include outer-container;
+    max-width: 850px;
+}
 
     // Step by Step List //
 .steps {
@@ -7,21 +10,19 @@
         line-height: $base-line-height * 1.15;
         width: 100%;
         display: block;
-             @include media($huge){
-            @include span-columns(12);
-        }
+        margin: 1em 0;
     }
     counter-reset: item;
     & > *:before {
         float: left;
         counter-increment: item;
         content: counter(item) " ";
-        font-size: $base-font-size * 3;
+        font-size: $base-font-size * 5;
         line-height: $base-line-height / 1.5;
-        padding-bottom: 1em;
+        display: inline-block;
         padding-right: 16px;
         font-family: $base-font-family;
-        font-weight: 100;
+        font-weight: 400;
         color: $base-blue;
     }
     img{

@@ -2,12 +2,14 @@
 .main-search-container {
     padding: 10em 0;
     text-align: center;
-    @include background(url("/images/main-banner.jpg") center no-repeat);
+    @include background(linear-gradient(rgba($base-orange, 0.25), rgba($base-orange, 0.25) ), url("/images/main-banner.jpg") no-repeat);
+    background-size: cover;
 
     &--category{
     	 padding: 10em 0;
     text-align: center;
-    	@include background(url("/images/category-hero.jpg") center no-repeat);
+    	@include background(linear-gradient(rgba($base-orange, 0.45), rgba($base-orange, 0.45) ), url("/images/category-hero.jpg") no-repeat);
+        background-size: cover;
     }
 }
 
