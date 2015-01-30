@@ -18,8 +18,9 @@
 
 	.cat-list-block{
 	// @include span-columns(12);
-	padding: 1.5em 0;
-
+	padding: 1.5em 0em;
+	border: 0px dotted $base-blue;
+	@include transition(all 0.2s ease-in-out);
 	@include media($xxmedium){
 		@include span-columns(6);
 		@include omega(2n);
@@ -30,11 +31,25 @@
 		@include omega(2n);
 		padding: 2em 0;
 		}
+
+	&:hover{
+		border: 1px dotted $base-blue;
+	}
 	}
 
 	.cat-list-block-header{
 		font-size: $base-font-size;
-		margin-bottom: 0.4em;
+		margin-bottom: 0.8em;
 		text-transform: uppercase;
+
+		a{
+			color: $base-blue;
+			display: block;
+
+
+			&:hover{
+				color: darken($base-blue, 15%);
+			}
+		}
 	}
 }

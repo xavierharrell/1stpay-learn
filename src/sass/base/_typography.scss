@@ -20,7 +20,7 @@
     color: $base-blue;
     text-transform: uppercase;
 
-&--small--white {  
+&--small--white {
     color: white;
     padding: 0 0 5px 0;
     font-size: $base-font-size / 0.75;
@@ -42,5 +42,10 @@
         padding: 0.5em 0;
         overflow: hidden;
     }
-
+.category-title{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    color: $base-blue;
+}
 

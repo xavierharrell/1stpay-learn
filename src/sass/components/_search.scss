@@ -1,0 +1,21 @@
+//Main Search Container //
+.main-search-container {
+    padding: 10em 0;
+    text-align: center;
+    @include background(url("/images/main-banner.jpg") center no-repeat);
+
+    &--category{
+    	 padding: 10em 0;
+    text-align: center;
+    	@include background(url("/images/category-hero.jpg") center no-repeat);
+    }
+}
+
+.search-hero-widget {
+    position: relative;
+    .wide {
+        display: block;
+        width: 100%;
+        padding: 1em 1em;
+    }
+}

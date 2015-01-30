@@ -1,34 +1,51 @@
 .new-cards{
-	@include outer-container();
-	padding: 0 0 4em 0;
-	margin: 0;
-	@include clearfix;
+	// padding: 0 0 4em 0;
+	// margin: 0;
+	// @include clearfix;
+	// position: relative;
 
 li{
-	@include transition (all 0.2s ease-in-out);
+@include transition (all 0.2s ease-in-out);
 	$card-background: $base-blue;
   $base-border-color: $dark-gray !default;
   $base-border-radius: 3px !default;
   $card-border: 1px solid $base-blue;
   $base-background-color: $dark-gray !default;
   $card-background: lighten($base-blue, 80%);
+
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   $card-image-hover-background: lighten($base-blue, 5%);
-  cursor: pointer;
+  	cursor: pointer;
 	width: 100%;
 	float: left;
-	height: 250px;
+	height: 230px;
 	text-align: center;
 	border: 1px solid $base-blue;
-	margin: 2em 0;
+	margin: 1em 0;
+	position: relative;
+.icon{
+	display: inline-block;
+	height: 80px;
+	weight: 80px;
+	padding-top: 10px;
 }
+.new-card-header{
+	font-size: 1em;
+	position: relative;
+	padding: 5px 0;
+	text-transform: uppercase;
+}
+.new-card-copy{
+	display: inline-block;
+}
+
 a{
 	display: block;
 
-	  &:focus,
+	&:focus,
   &:hover {
     background-color: $base-blue;
 
@@ -47,30 +64,18 @@ a{
   }
 }
 
+}
 
-.icon{
-	padding: 10px 0;
-	height: 100px;
-	weight: 100px;
-}
-.new-card-header{
-	font-size: 1em;
-	position: relative;
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-.new-card-copy{
-	display: inline-block;
-}
 }
 
 .new-cards li{
 	@include media($xxmedium){
 		width: 48%;
-		margin-right: 1%;
+		margin-right: 1.5%;
 	}
 	@include media($xxhuge){
-		width: 32%;
+		@include fill-parent;
+		width: 30%;
 	}
 	@include media($xxxhuge){
 		width: 23%;

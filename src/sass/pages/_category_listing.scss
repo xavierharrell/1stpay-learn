@@ -1,18 +1,13 @@
 .category-list{
-	.category-title{
-	font-size: 1.5em;
-	text-transform: uppercase;
-	padding: 0.5em 0;
-	color: black;
-}
-	li{
-		width: 100%;
-		@include media($medium){
-		padding: 0.5em 0;
-		display: inline-block;
-		width: 44%;
-		margin-right: 5%;
 
-		}
-	}
+	// li{
+	// 	width: 100%;
+	// 	@include media($medium){
+	// 	padding: 0.5em 0;
+	// 	display: inline-block;
+	// 	width: 44%;
+	// 	margin-right: 5%;
+
+	// 	}
+	// }
 }

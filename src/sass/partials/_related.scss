@@ -1,17 +1,15 @@
-// Related Entries //
 .related-entries{
 padding: 5em 0;
-background: lighten($base-blue, 30%);
+background: lighten($base-blue, 45%);
+position: relative;
 
  a{
       color: $base-blue;
         border-bottom: $base-blue;
         // float: left;
         cursor: pointer;
-        margin: 1em 0em;
+        margin: 1.5em 0em;
         display: block;
- 
-
 
 @include media($xxmedium){
     @include span-columns(6);
@@ -29,6 +27,6 @@ background: lighten($base-blue, 30%);
     }
 
 
-    } 
+    }
 
     }

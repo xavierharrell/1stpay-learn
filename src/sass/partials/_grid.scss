@@ -3,42 +3,42 @@
 // }
 
 .main-container{
-@include outer-container(100%);
+@include outer-container;
 }
 
 .constrain{
-	margin: 0 auto;
+margin: 0 auto;
 @include outer-container(100%);
 
-@include media($xxsmall){
-	@include outer-container(90%);
-}
+// @include media($xxsmall){
+// 	@include outer-container(90%);
+// }
 
-@include media($medium){
-	@include outer-container(90%);
-}
+// @include media($medium){
+// 	@include outer-container(90%);
+// }
 
-@include media($xxmedium){
-	@include outer-container(80%);
-}
+// @include media($xxmedium){
+// 	@include outer-container(80%);
+// }
 
-@include media($large){
-	@include outer-container(80%);
-}
+// @include media($large){
+// 	@include outer-container(80%);
+// }
 
 @include media($xxlarge){
-	@include outer-container(80%);
-}
-
-@include media($huge){
-	@include outer-container(90%);
-}
-@include media($xxhuge){
-	@include outer-container(80%);
-}
-@include media($xxxhuge){
 	@include outer-container(70%);
 }
+
+// @include media($huge){
+// 	@include outer-container(90%);
+// }
+// @include media($xxhuge){
+// 	@include outer-container(80%);
+// }
+// @include media($xxxhuge){
+// 	@include outer-container(70%);
+// }
 
 }
 
@@ -48,5 +48,5 @@
 }
 
 .padding-big{
-	padding: 6em 0;
+	padding: 6em 0.8em;
 }

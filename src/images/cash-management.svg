@@ -16,7 +16,7 @@
 	<path fill="#FFFFFF" d="M2.4,13.5v43c0,3,2.4,5.4,5.4,5.4h59.1v-43H7.8C4.8,18.9,2.4,16.5,2.4,13.5z"/>
 </g>
 <g>
-	<path fill="none" stroke="#05A8F3" stroke-width="1.9588" stroke-miterlimit="10" d="M50.6,35c-2.8,0-5.2,2.4-5.2,5.4
+	<path fill="none" stroke="#05A8F3" stroke-width="2" stroke-miterlimit="10" d="M50.6,35c-2.8,0-5.2,2.4-5.2,5.4
 		c0,3,2.3,5.4,5.2,5.4h18V35H50.6z"/>
 	<path fill="#FFFFFF" d="M50.6,35c-2.8,0-5.2,2.4-5.2,5.4c0,3,2.3,5.4,5.2,5.4h18V35H50.6z"/>
 </g>
@@ -32,7 +32,7 @@
 <g>
 	<g>
 		<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" x1="6.7" y1="23.8" x2="10.7" y2="23.8"/>
-		
+
 			<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" stroke-dasharray="7.3195,7.3195" x1="18.1" y1="23.8" x2="58.3" y2="23.8"/>
 		<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" x1="62" y1="23.8" x2="66" y2="23.8"/>
 	</g>
@@ -40,7 +40,7 @@
 <g>
 	<g>
 		<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" x1="6.7" y1="56" x2="10.7" y2="56"/>
-		
+
 			<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" stroke-dasharray="7.3195,7.3195" x1="18.1" y1="56" x2="58.3" y2="56"/>
 		<line fill="none" stroke="#05A8F3" stroke-miterlimit="10" x1="62" y1="56" x2="66" y2="56"/>
 	</g>
