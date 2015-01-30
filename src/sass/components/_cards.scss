@@ -1,10 +1,7 @@
 .cards {
-  position: relative;
-  @include clearfix;
-}
 
-
-.card {
+  .card {
+   
   ///////////////////////////////////////////////////////////
   $base-border-color: $dark-gray !default;
   $base-border-radius: 3px !default;
@@ -16,14 +13,14 @@
   $base-font-color: $dark-gray !default;
   //////////////////////////////////////////////////////////////////////////////////
 
-  $card-border-color: $base-border-color;
+  $card-border-color: $base-blue;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($base-blue, 80%);
-  // $card-header-background: $card-background;
+  $card-header-background: $card-background;
   $card-hover-background: lighten($card-background, 5%);
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5%);
-  $card-margin: 1em;
+
 
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
@@ -31,55 +28,34 @@
   border: $card-border;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
-  margin: 0 1em 3.5em 1em;
-  position: relative;
   text-align: center;
-  padding: 1.5em 0.5em;
-
-@include media($xxmedium){
-  @include outer-container(100%);
+  padding: 0.5em 0;
+  margin: 1em 0;
+  position: relative;
+  position: relative;
+  
+.icon {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
 }
 
-@include media($xxlarge){
-   @include span-columns(4);
-
-  }
-
-@include media($huge){
-  @include span-columns(4);
-  @include omega(4n);
-}
-  .card-image {
-    overflow: hidden;
-    max-height: 150px;
-
-    img {
-      @include transition (all 0.2s ease-in-out);
-      background: $card-image-background;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      width: 100%;
-    }
-  }
 
   .card-header {
     @include transition (all 0.2s ease-in-out);
-    border-bottom: $card-border;
     font-weight: bold;
     line-height: 1.5em;
     font-size: $base-font-size * 1.15;
     text-transform: uppercase;
+    // border-bottom: 1px solid $base-blue;
     padding: ($base-spacing / 3) ($base-spacing / 2);
   }
 
   .card-copy {
-    font-size: 0.9em;
-    line-height: 1.5em;
+    font-size: 1em;
+    line-height: 1.0em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
 
-    p {
-      margin: 0 0 ($base-spacing / 2);
-    }
   }
 
   &:focus,
@@ -90,9 +66,6 @@
       background: $card-image-hover-background;
     }
 
-    // .card-header {
-    //   background-color: $card-hover-background;
-    // }
   }
 
   &:active {
@@ -103,3 +76,8 @@
     }
   }
 }
+
+}
+
+
+

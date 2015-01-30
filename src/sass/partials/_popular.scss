@@ -7,7 +7,7 @@
         // float: left;
         color: white;
         margin: 1em 0em;
-        display: block;
+        // display: block;
         @include media($xxmedium) {
             @include span-columns(6);
         }

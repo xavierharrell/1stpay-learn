@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,68 +14,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="app.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<script src="//use.typekit.net/lov0xni.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+    <script src="//use.typekit.net/lov0xni.js"></script>
+    <script>
+    try {
+        Typekit.load();
+    } catch (e) {}
+    </script>
 </head>
+
 <body>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Beginning -->
-<!-- Beginning -->
+    <!-- Beginning -->
     <header>
-        <a id="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="Homepage">
+        <a id="menu-logo" href="#0"><img src="images/eliot-logo.svg" alt="Homepage">
         </a>
-        <nav id="cd-top-nav">
-           <ul>
-             <li><a href="categories.html">All Categories</a></li>
-             <li><a href="entry-listings.html">Category Entry List</a></li>
-             <li><a href="entry-single.html">Entry-single</a></li>
-             <li><a href="faq.html">FAQ</a></li>
-             <li><a href="search-results.html">Search Results</a></li>
-             <li><a href="404.html">404</a></li>
-             <li><a href="contact.html">Contact</a></li>
-           </ul>
+        <nav id="menu-top-nav">
         </nav>
-        <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+        <a id="menu-trigger" href="#0"><span class="menu-text">Menu</span><span class="cd-menu-icon"></span></a>
     </header>
-
-
-    <nav id="cd-lateral-nav">
-        <ul class="cd-navigation">
-            <!-- cd-navigation -->
-
-        <ul class="cd-navigation cd-single-item-wrapper">
-            <li>
-                <a href="#0">Getting Started</a>
-            </li>
-            <li>
-                <a href="#0">Settings</a>
-            </li>
-            <li>
-                <a href="#0">Inventory</a>
-            </li>
-            <li>
-                <a href="#0">Payments</a>
-            </li>
-            <li>
-                <a href="#0">Cash Management</a>
-            </li>
-            <li>
-                <a href="#0">Reporting</a>
-            </li>
-            <li><a href="#0">Loyalty</a>
-            </li>
-            <li>
-                <a href="#0">Hardware</a>
-            </li>
+    <nav id="horizontal-nav">
+        <ul class="menu-navigation">
+            <!-- menu-navigation -->
+            <ul class="menu-navigation single-item-wrapper">
+                <li>
+                    <a href="categories.html">Topics</a>
+                </li>
+                <li>
+                    <a href="#0">Guides</a>
+                </li>
+                <li>
+                    <a href="#0">Videos</a>
+                </li>
+                <li>
+                    <a href="faq.html">F.A.Q</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <!-- single-item-wrapper -->
         </ul>
-        <!-- cd-single-item-wrapper -->
-        </ul>
-
-
-        <div class="cd-navigation socials">
+        <div class="menu-navigation socials">
             <a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
             <a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
             <a class="cd-google cd-img-replace" href="#0">Google Plus</a>
@@ -80,125 +65,175 @@
         </div>
         <!-- socials -->
     </nav>
+    <main class="main-content">
         <section class="main-search-container">
-            <div class="main-search" id="the-basics">
-               <form action="/search-results" method="get" accept-charset="utf-8">
-                  <input type="search" placeholder="Search for topics on 1stPayPOS" class="big-search typeahead">
-               </form>
+            <div class="constrain">
+                <div class="search-hero-widget">
+                    <form action="/search-results" method="get" accept-charset="utf-8">
+                        <input class="wide search-hero" type="text" placeholder="Search for topics on 1stPayPOS">
+                    </form>
+                </div>
+                <p class="search-popular">Popular Search Terms: <a href="#">Term 1,</a><a href="#">Term 2</a>
+                </p>
             </div>
-                      <p>Popular Search Terms: <a href="#">Term 1,</a><a href="#">Term 2</a></p>
         </section>
-        <section class="main-topics-categories constrain">
-        <h1>Categories</h1>
-        <p>Your 1stPayPOS has powerful resources to help you manage your business.  Here’s everything you need to know to set up and use your system.</p>
+        <section class="main-topics-categories padding-big">
+            <div class="constrain">
+                <h1>Categories</h1>
+                <p>Your 1stPayPOS has powerful resources to help you manage your business. Here’s everything you need to know to set up and use your system.</p>
                 <ul class="cards">
                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/getting-started.svg" type=""></span>
-                            <p class="card-header">Getting Started</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                        <a href="#"> <span class="icon"><embed class="icon" src="images/getting-started.svg" type=""></span>
+                            <p class="card-header"><a href="">Getting Started</a>
+                            </p>
+                            <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/settings.svg" type=""></span>
-                            <p class="card-header">Settings</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                    <li class="card">
+                        <a href="#"><span class="icon"><embed class="icon" src="images/settings.svg" type=""></span>
+              <p class="card-header">Settings</p>
+            <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p></a>
+                    </li>
+                    <li class="card">
+                        <a href="#">
+                          <span class="icon"><embed class="icon" src="images/inventory.svg" type=""></span>
+                        <p class="card-header">Inventory</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/inventory.svg" type=""></span>
-                            <p class="card-header">Inventory</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                    <li class="card">
+                        <a href="#">
+                          <span class="icon"><embed class="icon" src="images/reporting.svg" type=""></span>
+                        <p class="card-header">Reporting</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/reporting.svg" type=""></span>
-                            <p class="card-header">Reporting</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                    <li class="card">
+                       <a href="#">
+                          <span class="icon"><embed class="icon" src="images/payments.svg" type=""></span>
+                        <p class="card-header">Payments</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                       </a>
+                    </li>
+                    <li class="card">
+                        <a href="#">
+                          <span class="icon"><embed class="icon" src="images/cash-management.svg" type=""></span>
+                        <p class="card-header">Cash Management</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/payments.svg" type=""></span>
-                            <p class="card-header">Payments</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                    <li class="card">
+                        <a href="#">
+                          <span class="icon"><embed class="icon" src="images/loyalty.svg" type=""></span>
+                        <p class="card-header">Loyalty</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
                         </a>
                     </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/cash-management.svg" type=""></span>
-                            <p class="card-header">Cash Management</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
-                        </a>
-                    </li>
-                     <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/loyalty.svg" type=""></span>
-                            <p class="card-header">Loyalty</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
-                        </a>
-                    </li>
-                       <li class="card">
-                        <a href="">
-                            <span class="icon"><embed class="icon" src="images/hardware.svg" type=""></span>
-                            <p class="card-header">Hardware</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
-                        </a>
+                    <li class="card">
+                       <a href="#">
+                          <span class="icon"><embed class="icon" src="images/hardware.svg" type=""></span>
+                        <p class="card-header">Hardware</p>
+                        <p class="card-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nesciunt.</p>
+                       </a>
                     </li>
                 </ul>
+            </div>
         </section>
- <section class="contact-help padding-big">
-  <div class="constrain centered-content">
-    <h2>Still Needing Help?</h2>
-    <p>Submit a ticket and we will help you out</p>
-    <a href="/contact.html" class="button">Submit a Ticket</a>
-  </div>
-</section>
-<footer class="footer" role="contentinfo">
-  <div class="footer-logo">
-    <img src="" alt="Logo image">
-  </div>
-  <div class="footer-links">
-    <ul>
-      <li><h3>Content</h3></li>
-      <li><a href="javascript:void(0)">About</a></li>
-      <li><a href="javascript:void(0)">Contact</a></li>
-      <li><a href="javascript:void(0)">Products</a></li>
-    </ul>
-    <ul>
-      <li><h3>Follow Us</h3></li>
-      <li><a href="javascript:void(0)">Facebook</a></li>
-      <li><a href="javascript:void(0)">Twitter</a></li>
-      <li><a href="javascript:void(0)">YouTube</a></li>
-    </ul>
-    <ul>
-      <li><h3>Legal</h3></li>
-      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-      <li><a href="javascript:void(0)">Privacy Policy</a></li>
-    </ul>
-  </div>
-
-  <hr>
-
-  <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
-</footer>
-
+        <section class="popular-entries">
+            <div class="constrain">
+                <h3 class="section-title--white">Popular</h3>
+                <ul class="popular-list">
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li><a class="#" href="#"><h4 class="entry-title--small--white">Lorem ipsum dolor.</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contact-help padding-big">
+            <div class="constrain centered-content">
+                <h2>Still Needing Help?</h2>
+                <p>Submit a ticket and we will help you out</p>
+                <a href="/contact.html" class="button">Submit a Ticket</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-logo">
+            <img src="" alt="Logo image">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li>
+                    <h3>Content</h3>
+                </li>
+                <li><a href="javascript:void(0)">About</a>
+                </li>
+                <li><a href="javascript:void(0)">Contact</a>
+                </li>
+                <li><a href="javascript:void(0)">Products</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>Follow Us</h3>
+                </li>
+                <li><a href="javascript:void(0)">Facebook</a>
+                </li>
+                <li><a href="javascript:void(0)">Twitter</a>
+                </li>
+                <li><a href="javascript:void(0)">YouTube</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>Legal</h3>
+                </li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a>
+                </li>
+                <li><a href="javascript:void(0)">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+    </footer>
     <!-- End -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
     <script src="global.js"></script>
     <script src="page.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
     </script>
 </body>
+
 </html>

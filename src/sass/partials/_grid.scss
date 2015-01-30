@@ -3,27 +3,41 @@
 // }
 
 .main-container{
-@include outer-container(80%);
-
-	@include media($huge){
-	@include outer-container(50%);
-	}
-
+@include outer-container(100%);
 }
 
 .constrain{
-@include outer-container(90%);
+	margin: 0 auto;
+@include outer-container(100%);
+
+@include media($xxsmall){
+	@include outer-container(90%);
+}
+
+@include media($medium){
+	@include outer-container(90%);
+}
 
 @include media($xxmedium){
-	@include outer-container(70%);
+	@include outer-container(80%);
+}
+
+@include media($large){
+	@include outer-container(80%);
 }
 
 @include media($xxlarge){
-	@include outer-container(85%);
+	@include outer-container(80%);
 }
 
 @include media($huge){
+	@include outer-container(90%);
+}
+@include media($xxhuge){
 	@include outer-container(80%);
+}
+@include media($xxxhuge){
+	@include outer-container(70%);
 }
 
 }
