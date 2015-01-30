@@ -4,6 +4,7 @@ var $ = require('jquery');
 window.jQuery = $;
 var _ = require('underscore');
 var typeahead = require('typeahead');
+var fluidvids = require('fluidvids')();
 // global.js already contains jQuery, so in our config.js file, we
 // are exposing it to other files like this one in the `require` array.
 // Also in config.js, jquery is listed in `external` array for this bundle.
@@ -103,7 +104,10 @@ $('.search-hero-results .typeahead').typeahead({
     event.preventDefault();
     $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(200).end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(200);
   });
-
 });
 
+fluidvids.init({
+  selector: ['iframe', 'object'],
+  players: ['player.vimeo.com']
+});
 
