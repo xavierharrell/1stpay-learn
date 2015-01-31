@@ -4,15 +4,10 @@ var $ = require('jquery');
 window.jQuery = $;
 var _ = require('underscore');
 var typeahead = require('typeahead');
-var fluidvids = require('fluidvids')();
-// global.js already contains jQuery, so in our config.js file, we
-// are exposing it to other files like this one in the `require` array.
-// Also in config.js, jquery is listed in `external` array for this bundle.
-// This combination lets this file use the jquery module bundled with
-// global.js, instead including it twice!
+var fluidvids = require('./fluidvids.js')();
+var picturefill = require('./picturefill.js');
 
 $(function () {
-
 
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
@@ -106,8 +101,5 @@ $('.search-hero-results .typeahead').typeahead({
   });
 });
 
-fluidvids.init({
-  selector: ['iframe', 'object'],
-  players: ['player.vimeo.com']
-});
+
 
