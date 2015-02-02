@@ -1,7 +1,3 @@
-// .constrain{
-// 	@include outer-container(90%);
-// }
-
 .main-container{
 @include outer-container;
 }
