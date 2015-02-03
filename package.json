@@ -14,8 +14,8 @@
     "underscore": "backbone/node_modules/underscore",
     "plugin": "./src/javascript/vendor/jquery-plugin.js",
     "fluidvids": "./node_modules/fluidvids.js/dist/fluidvids.min.js",
-    "picturefill": "./node_modules/picturefill/dist/picturefill.js",
-    "typeahead": "./src/javascript/components/typeahead.js/dist/typeahead.bundle.min.js"
+    "picturefill": "./src/javascript/components/picturefill/dist/picturefill.js",
+    "svgeezy": "./src/javascript/components/svgeezy/svgeezy.js"
   },
   "browserify": {
     "transform": [
@@ -25,12 +25,8 @@
     ]
   },
   "browserify-shim": {
-    "plugin": {
-      "exports": "plugin",
-      "depends": [
-        "jquery:$"
-      ]
-    }
+    "picturefill":{"exports": "picturefill"},
+    "svgeezy": {"exports": "svgeezy"}
   },
   "devDependencies": {
     "browser-sync": "^2.0.0-rc3",
@@ -55,7 +51,6 @@
     "imagemin": "^3.1.0",
     "lodash": "^2.4.1",
     "node-neat": "^1.4.2",
-    "picturefill": "^2.2.0",
     "pretty-hrtime": "~0.2.1",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "^1.0.0",
