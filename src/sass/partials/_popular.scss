@@ -2,25 +2,23 @@
     background: lighten($base-blue, 5%);
     position: relative;
     padding: 5em 0;
+<<<<<<< HEAD
+    .popular-list {}
+    .popular-list__item {
+        display: inline-block;
+    }
+    .popular-list__header {
+=======
     a {
         // float: left;
+>>>>>>> dce819e73eecf79fe5b545d066450b227750d633
         color: white;
-        margin: 1.5em 0em;
-        display: block;
-        @include media($xxmedium) {
-            @include span-columns(6);
-        }
-
-        @include media($xxlarge) {
-            @include span-columns(4);
-        }
-
-        @include media($huge) {
-            @include span-columns(3);
-        }
-
-        &:hover, &:focus {
-            color: $base-blue;
-        }
+        font-size: 1.3em;
     }
+@include media($large){
+    .popular-list__item{
+        @include span-columns(3);
+        @include omega(4n);
+    }
+}
 }
