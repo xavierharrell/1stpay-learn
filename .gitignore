@@ -1,6 +1,6 @@
 .DS_Store
+node_modules
 dist/
 build/
 src/javascript/components/
 npm-debug.log
-node_modules
