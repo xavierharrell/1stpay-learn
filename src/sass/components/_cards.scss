@@ -1,7 +1,7 @@
 .cards {
 
   .card {
-   
+
   ///////////////////////////////////////////////////////////
   $base-border-color: $dark-gray !default;
   $base-border-radius: 3px !default;
@@ -33,11 +33,12 @@
   margin: 1em 0;
   position: relative;
   position: relative;
-  
+
 .icon {
     width: 75px;
     height: 75px;
     display: inline-block;
+    margin: 0 auto 10px;
 }
 
 
