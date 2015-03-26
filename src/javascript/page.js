@@ -1,8 +1,6 @@
 // Browserify entry point for the page.js bundle (yay JavaScript!)
 
 var $ = require('jquery');
-window.jQuery = $;
-var _ = require('underscore');
 var fluidvids = require('./fluidvids.js')();
 var picturefill = require('picturefill');
 var svgeezy = require('svgeezy');
