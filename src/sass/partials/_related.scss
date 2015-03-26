@@ -1,32 +1,30 @@
-.related-entries{
-padding: 5em 0;
-background: lighten($base-blue, 45%);
-position: relative;
-
- a{
-      color: $base-blue;
-        border-bottom: $base-blue;
-        // float: left;
-        cursor: pointer;
-        margin: 1.5em 0em;
-        display: block;
-
-@include media($xxmedium){
-    @include span-columns(6);
-}
-
-@include media($xxlarge){
-    @include span-columns(4);
-}
-
-@include media($huge){
-    @include span-columns(3);
-}
-    &:hover,&:focus{
+.related-entries {
+    background: lighten($base-blue, 25%);
+    position: relative;
+    padding: 5em 1em;
+    .related-list {}
+    .related-list__item {
+        display: inline-block;
+    }
+    .related-list__header {
         color: white;
+        margin: 0.6em 0 0.2em 0;
+    a {
+        color: white;
+        font-size: 1.8em;
     }
-
-
+}
+@include media($new-small-viewport){
+    .related-list__item{
+        @include span-columns(6);
+        @include omega(2n);
     }
+}
 
+@include media($new-large-viewport){
+    .related-list__item{
+        @include span-columns(3);
+        @include omega(4n);
     }
+}
+}

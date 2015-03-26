@@ -1,17 +1,27 @@
 .popular-entries {
     background: lighten($base-blue, 5%);
     position: relative;
-    padding: 5em 0;
+    padding: 5em 1em;
     .popular-list {}
     .popular-list__item {
         display: inline-block;
     }
     .popular-list__header {
+        color: white;
+        margin: 0.6em 0 0.2em 0;
     a {
         color: white;
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
-@include media($large){
+}
+@include media($new-small-viewport){
+    .popular-list__item{
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
+
+@include media($new-large-viewport){
     .popular-list__item{
         @include span-columns(3);
         @include omega(4n);
