@@ -1,68 +1,45 @@
-.guides-list {
+.guide-list {
 position: relative;
 @include outer-container;
+}
 
+.guide{
+    display: inline-block;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+}
 
-    li {
-    	@include clearfix;
-        $base-spacing: 5.5em !default;
-        $card-background: $base-blue;
-        $base-border-color: $dark-gray !default;
-        $base-background-color: $dark-gray !default;
-        $card-background: lighten($base-blue, 80%);
-        @include transition(all 0.2s ease-in-out);
-        $card-image-hover-background: lighten($base-blue, 5%);
-        cursor: pointer;
-        // width: 100%;
-        float: left;
-        height: 300px;
-        text-align: center;
-        margin: 1em 0;
-        padding: 0.5em 0;
-        position: relative;
-        
-        img{
-            display: inline-block;
-            height: 100%;
-            weight: 100%;
-            // padding-top: 10px;
+.guide__cover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include transition(0.25s, ease-in);
 
-        }
-        a{
-            display: block;
-        }
-        .guide-header {
-            font-size: $base-font-size * 1.15;
-            font-weight: bold;
-            color: $base-blue;
-            padding: ($base-spacing / 6) ($base-spacing / 1);
-            text-transform: uppercase;
-        }
-        .guide-copy {
-            font-size: $base-font-size * 0.95;
-            line-height: 1.5em;
-            padding: ($base-spacing / 10) ($base-spacing / 2);
-        }
+    &:hover{
+        @include transform(translateY(-0.25em));
+        @include transform(scale(0.85));
     }
 }
 
-
-
-.guides li {
-@include media($small-viewport){
-	@include span-columns(6);
-	@include omega(2n);
+.guide__header{
+    font-size: $base-font-size * 1.5;
+    text-transform: uppercase;
 }
 
-@include media($medium-viewport){
-	@include span-columns(6);
-	@include omega(2n);
+.guide__desc{
+    font-size: $base-font-size / 1.05;
 }
 
-@include media($large-viewport){
-	@include span-columns(3);
-	@include omega(4n);
+@include media($new-small-viewport){
+    .guide{
+        @include span-columns(6);
+        @include omega(2n);
+    }
 }
 
-
+@include media($new-large-viewport){
+    .guide{
+        @include span-columns(3);
+        @include omega(4n);
+    }
 }
