@@ -1,0 +1,25 @@
+{
+  "name": "1stpaypos-learn",
+  "version": "0.0.0",
+  "homepage": "https://github.com/xavierharrell/1stpay-learn",
+  "authors": [
+    "Xavier Harrell <xavierharrell@gmail.com>"
+  ],
+  "description": "Learning portal",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/javascript/components"
+  ],
+  "dependencies": {
+    "svgeezy": "~1.0.0",
+    "picturefill": "~2.3.0"
+  }
+}
